@@ -1,0 +1,190 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1200px;
+    margin:0 auto
+}
+
+.controls{
+    margin-bottom: 20px;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+#noDataFound {
+    display:none;
+    margin: 0 auto;
+}
+
+.table-container{
+    overflow-x:scroll
+}
+
+
+select,input{
+    padding: 8px;
+    font-size:16px;
+
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom:20px;
+    border-radius: 12px;
+}
+
+th, td{
+   
+   padding: 12px;
+   text-align: left;
+
+}
+
+.table-head{
+    color:white;
+    background-color: rgb(54,48,74);
+    
+}
+
+th{
+    background-color: #f2f2f2;
+    font-weight:bold
+}
+
+
+.pagination {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap:10px
+}
+
+.pagination li {
+    margin: 0 5px;
+    padding: 8px 16px;
+    font-size:16px;
+    cursor:pointer;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+
+.pagination li:hover{
+    opacity:0.5;
+    background-color: lightgray;
+}
+
+
+.pagination li.active {
+    font-weight: bold;
+}
+
+.pagination li.disabled {
+    pointer-events: none;
+}
+
+.charts{
+    height:300px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+
+}
+
+.chart{
+    width: 40%;
+
+    margin-bottom:20px;
+}
+
+.description-cell {
+    position: relative;
+  }
+  
+  .read-more {
+    color: #3498db;
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+@media (max-width: 768px){
+    .pagination {
+        display: flex;
+        list-style: none;
+        justify-content: start;
+        align-items: center;
+        margin-top: 20px;
+        gap:10px
+    }
+    
+
+    #transactionTable td:nth-child(4), td:nth-child(5){
+        display:none;
+    }
+
+    .charts{
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .chart{
+        width: 100%;
+    }
+    .controls{
+        flex-direction:column;
+    }
+
+   
+}
