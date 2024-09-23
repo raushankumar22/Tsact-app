@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="connect-src 'self' https://fe-assignment.s3.ap-south-1.amazonaws.com;">
+    <title>Transaction App</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+
+</head> 
+<body>
+
+    <div class="container">
+        <h1>Transaction Dashboard</h1>
+        <div class="controls">
+            <select id="monthSelect">
+                <option value="">All Months</option>
+            </select>
+            <input type="text" id="searchInput" placeholder="Search Transactions">
+            <select id="sortSelect">
+                <option value="">Sort By</option>
+                <option value="price">Price</option>
+                <option value="date">Date</option>
+            </select>
+        </div>
+        <h1 id="noDataFound">No Data Found</h1>
+        <div class="table-container">
+        <table id="transactionTable">
+            <thead>
+                <tr class="table-head">
+                    <td>ID</td>
+                    <td>Title</td>
+                    <td>Price</td>
+                    <td>Description</td>
+                    <td>Category</td>
+                    <td>Sold</td>
+                    <td>DateOfSale</td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table></div>
+        <div id="pagination-container"></div>
+        <div class="charts">
+            <div class="chart">
+                <canvas id="barChart"></canvas>
+            </div>
+            <div class="chart">
+                <canvas id="pieChart"></canvas>
+            </div>
+        </div>
+     
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
